@@ -1,0 +1,12 @@
+12:23:06 **** Incremental Build of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MadLib.o" "..\\src\\MadLib.cpp" 
+..\src\MadLib.cpp:6:15: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  char* name = 0;
+               ^
+g++ -o MadLib.exe "src\\MadLib.o" 
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file MadLib.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+
+12:23:06 Build Finished (took 460ms)
+

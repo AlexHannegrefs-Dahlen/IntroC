@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\alex\introc++\drillspart1\4\source.cpp(18): warning C4172: returning address of local variable or temporary: randString
+  4.vcxproj -> C:\Users\Alex\IntroC++\DrillsPart1\Debug\4.exe
+  4.vcxproj -> C:\Users\Alex\IntroC++\DrillsPart1\Debug\4.pdb (Partial PDB)

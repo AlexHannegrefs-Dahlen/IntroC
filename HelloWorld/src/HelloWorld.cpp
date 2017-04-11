@@ -1,15 +1,11 @@
-//============================================================================
-// Name        : HelloWorld.cpp
-// Author      : Alex
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
 #include <iostream>
-using namespace std;
+#include <string.h>
+
+//using namespace std;
 
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	char meString[10] = { 0 };
+	strcpy(meString, "Hello");
+	std::cout << meString << std::endl;
 	return 0;
 }

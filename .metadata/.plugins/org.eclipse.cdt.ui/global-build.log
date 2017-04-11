@@ -1,0 +1,101 @@
+11:16:57 **** Incremental Build of configuration Debug for project tester ****
+Info: Internal Builder is used for build
+g++ -o tester.exe "src\\tester.o" 
+Info: Nothing to build for tester
+10:48:53 **** Rebuild of configuration Debug for project tester ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\tester.o" "..\\src\\tester.cpp" 
+g++ -o tester.exe "src\\tester.o" 
+10:51:59 **** Rebuild of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MadLib.o" "..\\src\\MadLib.cpp" 
+..\src\MadLib.cpp:5:15: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  char* name = 0;
+               ^
+..\src\MadLib.cpp: In function 'int PopulateAnimal(Animal*)':
+..\src\MadLib.cpp:23:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+g++ -o MadLib.exe "src\\MadLib.o" 
+10:59:30 **** Incremental Build of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MadLib.o" "..\\src\\MadLib.cpp" 
+..\src\MadLib.cpp:6:15: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  char* name = 0;
+               ^
+..\src\MadLib.cpp: In function 'int main()':
+..\src\MadLib.cpp:32:17: error: 'null' was not declared in this scope
+  PopulateAnimal(null);
+                 ^
+11:00:12 **** Incremental Build of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MadLib.o" "..\\src\\MadLib.cpp" 
+..\src\MadLib.cpp:6:15: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  char* name = 0;
+               ^
+..\src\MadLib.cpp: In function 'int main()':
+..\src\MadLib.cpp:33:21: warning: 'ani' is used uninitialized in this function [-Wuninitialized]
+  PopulateAnimal(ani);
+                     ^
+g++ -o MadLib.exe "src\\MadLib.o" 
+11:00:31 **** Incremental Build of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MadLib.o" "..\\src\\MadLib.cpp" 
+..\src\MadLib.cpp:6:15: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  char* name = 0;
+               ^
+g++ -o MadLib.exe "src\\MadLib.o" 
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file MadLib.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:00:36 **** Incremental Build of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -o MadLib.exe "src\\MadLib.o" 
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file MadLib.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:18:54 **** Incremental Build of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MadLib.o" "..\\src\\MadLib.cpp" 
+..\src\MadLib.cpp:6:15: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  char* name = 0;
+               ^
+g++ -o MadLib.exe "src\\MadLib.o" 
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file MadLib.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:19:04 **** Incremental Build of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -o MadLib.exe "src\\MadLib.o" 
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file MadLib.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:20:45 **** Incremental Build of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -o MadLib.exe "src\\MadLib.o" 
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file MadLib.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:21:34 **** Incremental Build of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MadLib.o" "..\\src\\MadLib.cpp" 
+..\src\MadLib.cpp:6:15: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  char* name = 0;
+               ^
+g++ -o MadLib.exe "src\\MadLib.o" 
+12:22:00 **** Incremental Build of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MadLib.o" "..\\src\\MadLib.cpp" 
+..\src\MadLib.cpp:6:15: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  char* name = 0;
+               ^
+g++ -o MadLib.exe "src\\MadLib.o" 
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file MadLib.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:22:33 **** Incremental Build of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -o MadLib.exe "src\\MadLib.o" 
+12:23:06 **** Incremental Build of configuration Debug for project MadLib ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MadLib.o" "..\\src\\MadLib.cpp" 
+..\src\MadLib.cpp:6:15: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  char* name = 0;
+               ^
+g++ -o MadLib.exe "src\\MadLib.o" 
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot open output file MadLib.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
