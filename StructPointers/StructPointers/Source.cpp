@@ -1,3 +1,4 @@
+#include "MemTester.h"
 #include <iostream>
 #include <string.h>
 
@@ -29,6 +30,28 @@ int PopulateAnimal(Animal * animal)
 	return 0;
 }
 
+void FreeAnimalMembers(Animal * myAnimal)
+{
+	if (!myAnimal->name)
+	{
+		delete[] myAnimal->name;
+		myAnimal->name = 0;
+	}
+}
+
+void FreeZoo()
+{
+	for(int i = 0; i < 10; i++)
+	{
+		if (!zoo[i])
+		{
+			FreeAnimalMembers(zoo[i]);
+			delete zoo[i];
+			zoo[i] = 0;
+		}
+	}
+}
+
 int main()
 {
 	int keepGoing = 1;
@@ -43,5 +66,6 @@ int main()
 			std::cout << animal->name << std::endl;
 		}
 	}
+	FreeZoo();
 	return 0;
 }

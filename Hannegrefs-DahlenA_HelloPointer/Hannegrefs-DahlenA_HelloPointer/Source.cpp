@@ -1,3 +1,4 @@
+#include "MemTester.h"
 #include <iostream>
 #include <string.h>
 
@@ -18,41 +19,79 @@ struct Person
 
 void initPerson(Person* p);
 void printPeople();
+void FreePeopleArray();
+void FreePeopleMem();
 
-Person * people[10];
-int numOfPeople = 0;
+Person* people[10000];
+
+int* PnumOfPeople = 0;
 
 int main()
 {
+	int numOfPeople;
+	std::cout << "How many contacts?" << std::endl;
+	std::cin >> numOfPeople;
+	while (std::cin.fail())
+	{
+		std::cin.clear();
+		std::cin.ignore();
+		std::cout << "Encoutered error" << std::endl;
+		std::cout << "Renter number of contacts" << std::endl;
+		std::cin >> numOfPeople;
+	}
+
+	PnumOfPeople = &numOfPeople;
+
+	Person * pPeople = new Person[*PnumOfPeople];
+	for (int i = 0; i < *PnumOfPeople; i++)
+	{
+		people[i] = &pPeople[i];
+	}
+
 	int keepGoing = 1;
 	while (keepGoing)
 	{
-		std::cout << "Add a person? [1:Yes, 0:No]" << std::endl;
-		std::cin >> keepGoing;
-		if (std::cin.fail())
-		{
-			std::cout << "Enter only 1 or 0" << std::endl;
-		}
-		else if (keepGoing)
-		{
-			Address *a = new Address;
-			Person* p = new Person;
-			p->address = a;
-			initPerson(p);
-			numOfPeople++;
-		}
-		if (numOfPeople >= 10)
+		Address * a = new Address;
+		Person * p = new Person;
+		p->address = a;
+		initPerson(p);
+		keepGoing++;
+		if (numOfPeople <= keepGoing-1)
 		{
 			keepGoing = 0;
 		}
 	}
 	printPeople();
+	FreePeopleArray();
+	delete[] pPeople;
 	return 0;
+}
+
+void FreePeopleArray()
+{
+	FreePeopleMem();
+	for (int i = 0; i < *PnumOfPeople; i++)
+	{
+		delete people[i];
+	}
+}
+
+void FreePeopleMem()
+{
+	for (int i = 0; i < *PnumOfPeople; i++)
+	{
+		delete[] people[i]->name;
+		delete[] people[i]->email;
+		delete[] people[i]->address->city;
+		delete[] people[i]->address->state;
+		delete[] people[i]->address->street1;
+		delete people[i]->address;
+	}
 }
 
 void printPeople()
 {
-	for (int i = 0; i < numOfPeople; i++)
+	for (int i = 0; i < *PnumOfPeople; i++)
 	{
 		std::cout << "Person " << i + 1 << std::endl;
 		std::cout << "Name: " << people[i]->name << std::endl;
@@ -63,6 +102,8 @@ void printPeople()
 		std::cout << "Zip: " << people[i]->address->zip << std::endl;
 	}
 }
+
+int index = 0;
 
 void initPerson(Person* p)
 {
@@ -116,11 +157,11 @@ void initPerson(Person* p)
 		std::cin.ignore();
 		std::cout << "Encoutered error" << std::endl;
 		std::cout << "Renter zip" << std::endl;
-		tempZip = 0;
 		std::cin >> tempZip;
 	}
 
 	p->address->zip = tempZip;
 
-	people[numOfPeople] = p;
+	people[index] = p;
+	index++;
 }

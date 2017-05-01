@@ -1,3 +1,4 @@
 ﻿  Source.cpp
+c:\users\alex\introc++\madlibvs\madlibvs\source.cpp(14): warning C4018: '<': signed/unsigned mismatch
   MadLibVS.vcxproj -> C:\Users\Alex\IntroC++\MadLibVS\Debug\MadLibVS.exe
   MadLibVS.vcxproj -> C:\Users\Alex\IntroC++\MadLibVS\Debug\MadLibVS.pdb (Partial PDB)
