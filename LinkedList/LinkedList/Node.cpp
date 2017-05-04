@@ -1,19 +1,20 @@
 #include "Node.h"
 
+using namespace csc195::hannegrefsdahlen;
 
 Node::Node()
 {
 
 }
 
-Node::Node(void * v, Node * p, Node * n)
+Node::Node(void* v, Node * p, Node * n)
 {
 	this->setValue(v);
 	this->setPrevious(p);
 	this->setNext(n);
 }
 
-void Node::setValue(void * v)
+void Node::setValue(void* v)
 {
 	this->value = v;
 }

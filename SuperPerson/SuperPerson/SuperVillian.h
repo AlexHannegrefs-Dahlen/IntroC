@@ -1,17 +1,24 @@
 #pragma once
+#include <string>
 #include "SuperPerson.h"
 
-class SuperVillian :
-	public SuperPerson
+namespace csc195
 {
-public:
-	SuperVillian();
-	SuperVillian(std::string, int, bool, int);
-	friend std::ostream& operator<<(std::ostream& out, SuperVillian& p);
-	void SetNumberOfKills(int);
-	int GetNumberOdKills();
-	~SuperVillian();
-private:
-	int numberOfKills;
-};
-
+	namespace hannegrefsdahlen
+	{
+		class SuperVillian :
+			public csc195::hannegrefsdahlen::SuperPerson
+		{
+		public:
+			SuperVillian();
+			SuperVillian(std::string name, int power, bool secret, int kills);
+			friend std::ostream& operator<<(std::ostream& out, SuperVillian& p);
+			int GetNumberOfKills();
+			void SetNumberOfKills(int);
+			virtual void TrashTalk();
+			~SuperVillian();
+		private:
+			int numberOfKills;
+		};
+	}
+}

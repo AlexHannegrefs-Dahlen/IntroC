@@ -15,28 +15,34 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SuperPerson.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MemTester.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SuperHero.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SuperPerson.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SuperVillian.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BlackVillian.h">
+    <ClInclude Include="Sheriff.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BlackHero.h">
+    <ClInclude Include="Flying.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RedHero.h">
+    <ClInclude Include="Vig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RedVillian.h">
+    <ClInclude Include="Jester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,19 +53,25 @@
     <ClCompile Include="SuperHero.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files\Resource Files</Filter>
+    </ClCompile>
     <ClCompile Include="SuperVillian.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BlackVillian.cpp">
+    <ClCompile Include="Sheriff.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BlackHero.cpp">
+    <ClCompile Include="Flying.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RedHero.cpp">
+    <ClCompile Include="Vig.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RedVillian.cpp">
+    <ClCompile Include="Jester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

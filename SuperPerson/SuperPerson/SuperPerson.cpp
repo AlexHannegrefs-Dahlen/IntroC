@@ -1,22 +1,23 @@
 #include <ostream>
+#include <string>
 #include "SuperPerson.h"
 using namespace std;
+using namespace csc195;
+using namespace hannegrefsdahlen;
 
 SuperPerson::SuperPerson()
 {
 
 }
 
-ostream& operator<<(ostream& out, SuperPerson & p)
+ostream& csc195::hannegrefsdahlen::operator<<(ostream& out, SuperPerson& p)
 {
 	string inden;
-	if (p.SecretIdentity == 0)
-
-		inden = "false";
-
-	else
+	if (p.IsSecretIdentity())
 		inden = "true";
-	out << p.name << " " << p.PowerLevel << " " << inden;
+	else
+		inden = "false";
+	out << p.GetName() << " " << p.GetPowerLvl() << " " << inden;
 	return out;
 }
 
@@ -52,9 +53,49 @@ bool SuperPerson::IsSecretIdentity()
 	return this->SecretIdentity;
 }
 
-void SuperPerson::SetSecretIdenty(bool iden)
+void SuperPerson::SetSecretIdentity(bool iden)
 {
 	this->SecretIdentity = iden;
+}
+
+bool SuperPerson::operator==(SuperPerson& test)
+{
+	return this->GetPowerLvl() == test.GetPowerLvl();
+}
+bool SuperPerson::operator!=(SuperPerson& test)
+{
+	return !(*this == test);
+}
+bool SuperPerson::operator<(SuperPerson& test)
+{
+	if (this->GetPowerLvl() < test.GetPowerLvl())
+		return true;
+	else
+		return false;
+}
+bool SuperPerson::operator>(SuperPerson& test)
+{
+	return !(*this < test);
+}
+bool SuperPerson::operator<=(SuperPerson& test)
+{
+	if (*this != test)
+		return *this < test;
+	else
+		return true;
+}
+bool SuperPerson::operator>=(SuperPerson& test)
+{
+	if (*this != test)
+		return *this > test;
+	else
+		return true;
+}
+void SuperPerson::operator=(SuperPerson&  test)
+{
+	this->SetPowerLvl(test.GetPowerLvl());
+	this->SetName(test.GetName());
+	this->SetSecretIdentity(test.IsSecretIdentity());
 }
 
 SuperPerson::~SuperPerson()

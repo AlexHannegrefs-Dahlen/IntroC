@@ -2,8 +2,8 @@
 #include "List.h"
 #include "Node.h"
 #include <iostream>
-
-void printValue(void * n)
+using namespace csc195::hannegrefsdahlen;
+void printValue(void* n)
 {
 	std::cout << *(int*)n <<std::endl;
 }
@@ -19,7 +19,7 @@ int cmp(void * p1, void * p2)
 
 int main()
 {
-	List mylist;
+	List<int> mylist;
 	int first = 0, second = 2, third = 6, fourth = 14, fifth = 30, sixth = 62, seveth = 126;
 
 	mylist.add(&seveth);

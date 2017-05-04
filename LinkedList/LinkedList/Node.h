@@ -1,19 +1,25 @@
 #pragma once
-class Node
+namespace csc195
 {
-public:
-	Node();
-	Node(void * v, Node * p, Node * n);
-	void setValue(void * v);
-	void * getValue();
-	void setPrevious(Node * p);
-	Node * getPrevious();
-	void setNext(Node * n);
-	Node * getNext();
-	~Node();
-private:
-	void * value;
-	Node * previous;
-	Node * next;
-};
-
+	namespace hannegrefsdahlen
+	{
+		class T;
+		class Node
+		{
+		public:
+			Node();
+			Node(void*, Node * p, Node * n);
+			void setValue(void*);
+			void * getValue();
+			void setPrevious(Node * p);
+			Node * getPrevious();
+			void setNext(Node * n);
+			Node * getNext();
+			~Node();
+		private:
+			void* value;
+			Node * previous;
+			Node * next;
+		};
+	}
+}

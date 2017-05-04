@@ -139,23 +139,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="BlackHero.h" />
-    <ClInclude Include="BlackVillian.h" />
+    <ClInclude Include="Flying.h" />
+    <ClInclude Include="Jester.h" />
+    <ClInclude Include="List.h" />
     <ClInclude Include="MemTester.h" />
-    <ClInclude Include="RedHero.h" />
-    <ClInclude Include="RedVillian.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="Sheriff.h" />
     <ClInclude Include="SuperHero.h" />
     <ClInclude Include="SuperPerson.h" />
     <ClInclude Include="SuperVillian.h" />
+    <ClInclude Include="Vig.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BlackHero.cpp" />
-    <ClCompile Include="BlackVillian.cpp" />
-    <ClCompile Include="RedHero.cpp" />
-    <ClCompile Include="RedVillian.cpp" />
+    <ClCompile Include="Flying.cpp" />
+    <ClCompile Include="Jester.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="Sheriff.cpp" />
+    <ClCompile Include="Source.cpp" />
     <ClCompile Include="SuperHero.cpp" />
     <ClCompile Include="SuperPerson.cpp" />
     <ClCompile Include="SuperVillian.cpp" />
+    <ClCompile Include="Vig.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
